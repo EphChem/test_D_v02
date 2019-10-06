@@ -92,6 +92,7 @@ class MedicalQAModelwithBert(tf.keras.Model):
             name='a_ffn')
         self.layer_ind = layer_ind
 
+    @tf.function
     def call(self, inputs):
 
         if 'q_input_ids' in inputs:
